@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  @apply bg-black text-white;
+}
+
+/* ── Animation utilities ──────────────────────────────────────────────── */
+.animate-in {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes float {
+  0%   { transform: translateY(0);   }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0);   }
+}
+.animate-float         { animation: float 3s ease-in-out infinite; }
+.animation-delay-1000  { animation-delay: 1s; }
+.animation-delay-2000  { animation-delay: 2s; }
+
+/* ── Text gradient helper ─────────────────────────────────────────────── */
+.text-gradient {
+  @apply text-transparent bg-clip-text;
+}
+
+/* ── Tiny vertical connector used in older cards ──────────────────────── */
+.flow-line {
+  @apply w-0.5 h-7 bg-gradient-to-b from-gray-700 to-gray-600 ml-5 -mt-2;
+}
+
+/* ── Mobile‑menu slide‑down demo ──────────────────────────────────────── */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0);      }
+}
+
+/* ── Simple spin util (e.g., loaders) ─────────────────────────────────── */
+@keyframes spin {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* ── Optional Lucide SVG helpers if you ever inline icons ─────────────── */
+.Phone,
+.MessageCircle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+  stroke: currentColor;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
