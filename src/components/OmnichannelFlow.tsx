@@ -84,65 +84,93 @@ const PhoneIntegration: React.FC = () => (
     </div>
 
     {/* bubbles spread out, with WhatsApp & Payment further right */}
-    <Bubble
-      className="-top-6 -left-48 -rotate-6"
-      iconBg="bg-blue-500"
-      icon={<FileText className="w-5 h-5 text-white" />}
-      title="New Lead"
-      time="Just now"
-      body="Lead form submitted. AI agent initiating call..."
-    />
+   {/* New Lead */}
+  <Bubble
+    className="
+      -top-16             /* mobile: 11rem down */
+      -left-12           /* mobile: 3rem left */
+      md:-left-48        /* desktop: 12rem left */
+      md:-top-6          /* desktop: 1.5rem up */
+      -rotate-6
+    "
+    iconBg="bg-blue-500"
+    icon={<FileText className="w-5 h-5 text-white" />}
+    title="New Lead"
+    time="Just now"
+    body="Lead form submitted. AI agent initiating call..."
+  />
 
-    <Bubble
-      className="top-4 -right-36 md:-right-48 rotate-6"
-      iconBg="bg-green-600"
-      icon={<WhatsApp className="w-5 h-5 text-white" />}
-      title="WhatsApp Update"
-      time="Just now"
-    >
-      <p className="text-xs text-gray-300 mb-3">
-        Here's the product information you requested! 📱
-      </p>
-      <div className="bg-gray-700 rounded p-2 text-xs">
-        <p className="font-medium text-gray-200">Product-Details.pdf</p>
-        <div className="flex justify-between mt-1">
-          <span className="text-gray-400">2.4 MB</span>
-          <span className="text-blue-400">Download</span>
-        </div>
+  {/* WhatsApp Update */}
+  <Bubble
+    className="
+      top-28             /* mobile: 7rem down */
+      -right-12          /* mobile: 3rem right */
+      md:-right-48       /* desktop: 12rem right */
+      rotate-6
+    "
+    iconBg="bg-green-600"
+    icon={<WhatsApp className="w-5 h-5 text-white" />}
+    title="WhatsApp Update"
+    time="Just now"
+  >
+    <p className="text-xs text-gray-300 mb-3">
+      Here's the product information you requested! 📱
+    </p>
+    <div className="bg-gray-700 rounded p-2 text-xs">
+      <p className="font-medium text-gray-200">Product-Details.pdf</p>
+      <div className="flex justify-between mt-1">
+        <span className="text-gray-400">2.4 MB</span>
+        <span className="text-blue-400">Download</span>
       </div>
-    </Bubble>
+    </div>
+  </Bubble>
 
-    <Bubble
-      className="bottom-20 -right-36 md:-right-[14rem] -rotate-3 animation-delay-1000"
-      iconBg="bg-blue-600"
-      icon={<CreditCard className="w-5 h-5 text-white" />}
-      title="Payment Link"
-      time="1 min ago"
-    >
-      <p className="text-xs text-gray-300 mb-2">
-        Complete your purchase securely via WhatsApp
-      </p>
-      <button className="w-full bg-green-600 text-white text-xs font-medium py-2 px-4 rounded">
-        Pay Now • $299
-      </button>
-    </Bubble>
+  {/* Payment Link */}
+  <Bubble
+    className="
+      -bottom-10          /* mobile: 3rem up from bottom */
+      -right-12          /* mobile: 3rem right */
+      md:-right-[14rem]  /* desktop: 14rem right */
+      -rotate-3
+      animation-delay-1000
+    "
+    iconBg="bg-blue-600"
+    icon={<CreditCard className="w-5 h-5 text-white" />}
+    title="Payment Link"
+    time="1 min ago"
+  >
+    <p className="text-xs text-gray-300 mb-2">
+      Complete your purchase securely via WhatsApp
+    </p>
+    <button className="w-full bg-green-600 text-white text-xs font-medium py-2 px-4 rounded">
+      Pay Now • $299
+    </button>
+  </Bubble>
 
-    <Bubble
-      className="bottom-32 -left-[14rem] rotate-3 animation-delay-2000"
-      iconBg="bg-purple-600"
-      icon={<BarChart3 className="w-5 h-5 text-white" />}
-      title="CRM Updated"
-      time="2 mins ago"
-    >
-      {['Lead Status: Hot', 'Sentiment: Positive', 'Next Action: Follow-up'].map(
-        (txt) => (
-          <div key={txt} className="flex items-center text-xs text-gray-300">
-            <CheckCircle2 className="w-4 h-4 mr-2 text-green-500" />
-            <span>{txt}</span>
-          </div>
-        )
-      )}
-    </Bubble>
+  {/* CRM Updated */}
+  <Bubble
+    className="
+      bottom-28           /* mobile: 7rem up from bottom */
+      -left-12            /* mobile: 3rem left */
+      md:-left-[14rem]    /* desktop: 14rem left */
+      rotate-3
+      animation-delay-2000
+    "
+    iconBg="bg-purple-600"
+    icon={<BarChart3 className="w-5 h-5 text-white" />}
+    title="CRM Updated"
+    time="2 mins ago"
+  >
+    {['Lead Status: Hot', 'Sentiment: Positive', 'Next Action: Follow-up'].map(
+      (txt) => (
+        <div key={txt} className="flex items-center text-xs text-gray-300">
+          <CheckCircle2 className="w-4 h-4 mr-2 text-green-500" />
+          <span>{txt}</span>
+        </div>
+      )
+    )}
+  </Bubble>
+
   </div>
 );
 
