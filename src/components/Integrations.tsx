@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Database, BookOpen, File, Clipboard, PanelRight } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa";
 
 interface IntegrationCardProps {
   icon: React.ReactNode;
@@ -68,34 +69,43 @@ const Integrations: React.FC = () => {
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <IntegrationCard 
-            icon={<Database className="w-6 h-6 text-cyan-400" />}
-            title="CRM Integration"
-            description="Connect with Salesforce, HubSpot, Zoho CRM and more to update leads, contacts, and opportunities in real-time."
-            delay={0}
-          />
-          
-          <IntegrationCard 
-            icon={<BookOpen className="w-6 h-6 text-violet-400" />}
-            title="LMS Synchronization"
-            description="Integrate with your Learning Management Systems to handle enrollments, assignments, and course information."
-            delay={1}
-          />
-          
-          <IntegrationCard 
-            icon={<File className="w-6 h-6 text-emerald-400" />}
-            title="Document Management"
-            description="Send, receive, and process documents securely from Google Drive, Dropbox, or custom storage systems."
-            delay={2}
-          />
-          
-          <IntegrationCard 
-            icon={<Clipboard className="w-6 h-6 text-amber-400" />}
-            title="Google Sheets & Excel"
-            description="Read from and write to spreadsheets automatically, keeping your data in sync across systems."
-            delay={3}
-          />
-        </div>
+  <a href="https://wa.me/918010545225" target="_blank" rel="noopener noreferrer">
+    <IntegrationCard 
+      icon={<Database className="w-6 h-6 text-cyan-400" />}
+      title="CRM"
+      description="Connect with Salesforce, HubSpot, Zoho CRM and more to update leads, contacts, and opportunities in real-time."
+      delay={0}
+    />
+  </a>
+
+  <a href="https://wa.me/918010545225" target="_blank" rel="noopener noreferrer">
+    <IntegrationCard 
+      icon={<FaWhatsapp className="w-6 h-6 text-[#25D366]" />}
+      title="WhatsApp"
+      description="Send automated messages, share documents, and engage customers directly on WhatsApp with real-time updates."
+      delay={1}
+    />
+  </a>
+
+  <a href="https://wa.me/918010545225" target="_blank" rel="noopener noreferrer">
+    <IntegrationCard 
+      icon={<Clipboard className="w-6 h-6 text-amber-400" />}
+      title="Call Center"
+      description="Integrate with your telephony systems to automate outbound calls, log interactions, and streamline support workflows."
+      delay={3}
+    />
+  </a>
+
+  <a href="https://wa.me/918010545225" target="_blank" rel="noopener noreferrer">
+    <IntegrationCard 
+      icon={<File className="w-6 h-6 text-emerald-400" />}
+      title="Website"
+      description="Embed AI voice agents on your website to capture leads, handle queries, and offer 24/7 assistance seamlessly."
+      delay={2}
+    />
+  </a>
+</div>
+
         
         <div className="mt-14 bg-gradient-to-r from-gray-900 to-gray-900/80 border border-gray-800 rounded-xl p-8 relative animate-on-scroll">
           <div className="absolute -top-5 -right-5 w-40 h-40 bg-cyan-500/10 rounded-full blur-[50px] -z-10"></div>

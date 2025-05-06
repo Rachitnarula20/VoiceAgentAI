@@ -49,12 +49,6 @@ const Header: React.FC<HeaderProps> = ({ openModal }) => {
           >
             Book Demo
           </button>
-          <a 
-            href="#try-bot" 
-            className="border border-gray-600 hover:border-cyan-400 text-white px-5 py-2 rounded-full transition-all hover:text-cyan-400"
-          >
-            Try Live Bot
-          </a>
         </nav>
 
         {/* Mobile Menu Button */}

@@ -11,9 +11,9 @@ import {
   FileText,
   BarChart3,
   RefreshCw,
-  MessageCircle as WhatsApp,
   CheckCircle2,
 } from 'lucide-react';
+import { FaWhatsapp } from "react-icons/fa";
 
 /* ── Floating “bubble” card ──────────────────────────────── */
 const Bubble: React.FC<{
@@ -109,7 +109,7 @@ const PhoneIntegration: React.FC = () => (
       rotate-6
     "
     iconBg="bg-green-600"
-    icon={<WhatsApp className="w-5 h-5 text-white" />}
+    icon={<FaWhatsapp className="w-5 h-5 text-white" />}
     title="WhatsApp Update"
     time="Just now"
   >
@@ -236,19 +236,19 @@ const OmnichannelFlow: React.FC = () => {
               sub: 'Inbound or outbound calls handled naturally by our AI agent',
             },
             {
-              bg: 'from-cyan-600 to-cyan-800',
-              icon: <MessageSquare className="w-6 h-6 text-white" />,
+              bg: 'from-[#25D366] to-[#128C7E]',
+              icon: <FaWhatsapp className="w-6 h-6 text-white" />,
               heading: 'Sends info mid-call',
               sub: 'Product links, images, or documents via WhatsApp or email during the conversation',
             },
             {
-              bg: 'from-emerald-600 to-emerald-800',
+              bg: 'from-violet-600 to-violet-800',
               icon: <Mail className="w-6 h-6 text-white" />,
               heading: 'Continuous conversation',
               sub: 'Chat continues after the call on WhatsApp, SMS, or web messenger',
             },
             {
-              bg: 'from-amber-600 to-amber-800',
+              bg: 'from-[#25D366] to-[#128C7E]',
               icon: <CreditCard className="w-6 h-6 text-white" />,
               heading: 'Transact inside chat',
               sub: 'Payments, bookings, and form submissions handled directly in the conversation',

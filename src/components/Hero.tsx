@@ -25,33 +25,28 @@ const Hero: React.FC<HeroProps> = ({ openModal }) => {
         <div className="flex flex-col md:flex-row items-center md:space-x-8">
           <div className="md:w-1/2 space-y-6 md:space-y-8 mb-12 md:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-in">
-              <span className="block">Conversations That</span>
+              <span className="block">AI Conversations That</span>
               <span className="block">Start on Calls —</span>
               <span className="block">and <span className="text-cyan-400">Continue Anywhere</span></span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 animate-in">
-            An AI-powered voice agent that talks on calls, sends real-time info on WhatsApp or email, handles follow-ups over chat, and syncs seamlessly with your CRM, LMS, and website.
+            An AI-powered voice agent that speaks and act like human — talks on calls, sends real-time info on WhatsApp or email, handles follow-ups over chat, and syncs seamlessly with your CRM, LMS, and website.
 
 
 
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-in">
-              <button 
-                onClick={openModal}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-emerald-400 text-black font-medium px-6 py-3 rounded-full transition-all transform hover:translate-y-[-2px] hover:shadow-lg"
-              >
-                <MessageSquare className="w-5 h-5" />
-                Book Demo
-              </button>
-              
-              <a 
-                href="#try-bot"
-                className="flex items-center justify-center border border-gray-600 hover:border-cyan-400 text-white px-6 py-3 rounded-full transition-all transform hover:translate-y-[-2px] hover:text-cyan-400"
-              >
-                Try Live Bot
-              </a>
+            <a
+  href="https://wa.me/918010545225"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-emerald-400 text-black font-medium px-6 py-3 rounded-full transition-all transform hover:translate-y-[-2px] hover:shadow-lg"
+>
+  <MessageSquare className="w-5 h-5" />
+  Book Demo
+</a>
             </div>
           </div>
           

@@ -76,13 +76,15 @@ const LaunchCTA: React.FC<LaunchCTAProps> = ({ openModal }) => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-on-scroll">
-              <button
-                onClick={openModal} 
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-emerald-400 text-black font-medium px-6 py-3 rounded-full transition-all transform hover:translate-y-[-2px] hover:shadow-lg"
-              >
-                <Calendar className="w-5 h-5" />
-                Book Demo
-              </button>
+            <a
+  href="https://wa.me/918010545225"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-emerald-400 text-black font-medium px-6 py-3 rounded-full transition-all transform hover:translate-y-[-2px] hover:shadow-lg"
+>
+  <Calendar className="w-5 h-5" />
+  Book Demo
+</a>
               
               <a 
                 href="#use-cases"
