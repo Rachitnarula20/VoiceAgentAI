@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ openModal }) => {
         <div className="flex items-center">
           <div className="flex items-center gap-2">
             <MessageSquare className="h-8 w-8 text-cyan-400" />
-            <span className="font-bold text-xl tracking-tight">VoiceFlow<span className="text-cyan-400">AI</span></span>
+            <span className="font-bold text-xl tracking-tight">Convosia<span className="text-cyan-400">AI</span></span>
           </div>
         </div>
 
@@ -83,12 +83,7 @@ const Header: React.FC<HeaderProps> = ({ openModal }) => {
           >
             Book Demo
           </button>
-          <a 
-            href="#try-bot" 
-            className="border border-gray-600 hover:border-cyan-400 text-white py-2 rounded-full text-center transition-all hover:text-cyan-400"
-          >
-            Try Live Bot
-          </a>
+          
         </div>
       </div>
     </header>
